@@ -8,9 +8,11 @@ const CaughtPokemon = (props) => {
   const [ pokemonNameInput, setPokemonNameInput ] = useState("")
 
   const catchPokemon = () => {
+    if (pokemonNameInput) {
     //let randomPokemon = Math.floor(Math.random() * pokemonArr.length)
     setCaught(caught.concat(pokemonNameInput))
     setPokemonNameInput("")
+    }
   }
 
   const handleInputChange = (event) => {
